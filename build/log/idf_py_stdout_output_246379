@@ -1,0 +1,184 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ee68h (126568) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0002ee90 vaddr=3ffb0000 size=01188h (  4488) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a0b2ch (658220) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d0b54 vaddr=3ffb1188 size=02d94h ( 11668) load[0m
+[0;32mI (365) esp_image: segment 4: paddr=000d38f0 vaddr=40080000 size=17f48h ( 98120) load[0m
+[0;32mI (403) esp_image: segment 5: paddr=000eb840 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu start user code[0m
+[0;32mI (434) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (434) app_init: Application information:[0m
+[0;32mI (434) app_init: Project name:     hello_world[0m
+[0;32mI (438) app_init: App version:      1[0m
+[0;32mI (442) app_init: Compile time:     Dec  2 2025 18:04:30[0m
+[0;32mI (447) app_init: ELF file SHA256:  6fd228213...[0m
+[0;32mI (451) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (455) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (459) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (463) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (473) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (478) heap_init: At 3FFB85F0 len 00027A10 (158 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (489) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (494) heap_init: At 40097F48 len 000080B8 (32 KiB): IRAM[0m
+[0;32mI (501) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;33mW (506) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (529) MAIN: Starting ESP32 Temperature Monitor[0m
+[0;32mI (549) DHT11: DHT11 Temperature Monitor with WiFi/MQTT[0m
+[0;32mI (549) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (549) BUZZER: Testing buzzer...[0m
+[0;32mI (549) BUZZER: Beeping at 2500 Hz for 200 ms[0m
+[0;32mI (749) BUZZER: Beep complete[0m
+[0;32mI (1249) MAIN: Initializing WiFi...[0m
+[0;32mI (1259) wifi:wifi driver task: 3ffc05c8, prio:23, stack:6656, core=0[0m
+[0;32mI (1269) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1269) wifi:wifi certification version: v7.0[0m
+[0;32mI (1269) wifi:config NVS flash: enabled[0m
+[0;32mI (1269) wifi:config nano formatting: disabled[0m
+[0;32mI (1279) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1279) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1279) wifi:Init management short buffer num: 32[0m
+[0;32mI (1289) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1289) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1299) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1299) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1309) wifi_init: rx ba win: 6[0m
+[0;32mI (1309) wifi_init: accept mbox: 6[0m
+[0;32mI (1309) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1309) wifi_init: udp mbox: 6[0m
+[0;32mI (1319) wifi_init: tcp mbox: 6[0m
+[0;32mI (1319) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1319) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1329) wifi_init: tcp mss: 1440[0m
+[0;32mI (1329) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1329) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (1339) WiFi: No NVS storage. Using Kconfig credentials.[0m
+[0;32mI (1339) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1429) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1449) wifi:mode : sta (78:1c:3c:f6:1f:fc)[0m
+[0;32mI (1449) wifi:enable tsf[0m
+[0;32mI (1449) WiFi: WiFi initialization finished. Connecting to Kietwifi...[0m
+[0;32mI (1479) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1479) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1479) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1489) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1659) wifi:state: run -> init (0x3c0)[0m
+[0;32mI (1669) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1669) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (1669) WiFi: Connect to WiFi failed[0m
+[0;33mW (1789) wifi:tx null, bss is null[0m
+[0;32mI (4089) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (4089) WiFi: Connect to WiFi failed[0m
+[0;32mI (4099) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4099) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4109) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4119) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4149) wifi:connected with Kietwifi, aid = 1, channel 1, BW20, bssid = c2:e1:63:3d:98:08[0m
+[0;32mI (4149) wifi:security: WPA2-PSK, phy: bgn, rssi: -30[0m
+[0;32mI (4159) wifi:pm start, type: 1[0m
+
+[0;32mI (4159) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4179) wifi:<ba-add>idx:0 (ifx:0, c2:e1:63:3d:98:08), tid:0, ssn:0, winSize:64[0m
+[0;32mI (4239) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4239) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (5199) esp_netif_handlers: sta ip: 10.166.210.225, mask: 255.255.255.0, gw: 10.166.210.31[0m
+[0;32mI (5199) WiFi: Got IP:10.166.210.225[0m
+[0;32mI (5199) WiFi: Connected to WiFi[0m
+[0;32mI (5199) MAIN: WiFi connected successfully[0m
+[0;32mI (5199) MAIN: Starting MQTT client...[0m
+[0;32mI (5209) MQTT: Connecting to MQTT broker: mqtt://test.mosquitto.org[0m
+[0;32mI (5219) MQTT: MQTT client started[0m
+[1;31mE (6089) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read(): EOF[0m
+[1;31mE (6089) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;32mI (6089) MQTT: MQTT_EVENT_ERROR[0m
+[1;31mE (6089) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned -2[0m
+[1;31mE (6099) mqtt_client: MQTT connect failed[0m
+[0;32mI (6109) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;33mW (7239) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (7239) DHT11: Failed to read from DHT11[0m
+[0;33mW (12259) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (12259) DHT11: Failed to read from DHT11[0m
+[0;33mW (17279) DHT11: Timeout at bit 39 waiting for LOW[0m
+[0;33mW (17279) DHT11: Failed to read from DHT11[0m
+[0;33mW (22299) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (22299) DHT11: Failed to read from DHT11[0m
+[0;32mI (23089) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (23499) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=58862[0m
+[0;32mI (24729) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (24729) MQTT: TOPIC=esp32/command[0m
+[0;32mI (24729) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":686,"timerCount":"ปิด(11:01)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;32mI (25549) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (25549) MQTT: TOPIC=esp32/command[0m
+[0;32mI (25549) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":678,"timerCount":"ปิด(10:60)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;32mI (26369) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (26369) MQTT: TOPIC=esp32/command[0m
+[0;32mI (26369) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":672,"timerCount":"ปิด(10:59)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;33mW (27319) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (27319) DHT11: Failed to read from DHT11[0m
+[0;33mW (32339) DHT11: Timeout at bit 39 waiting for LOW[0m
+[0;33mW (32339) DHT11: Failed to read from DHT11[0m
+[0;32mI (33939) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (33939) MQTT: TOPIC=esp32/command[0m
+[0;32mI (33939) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":714,"timerCount":"ปิด(10:52)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;32mI (36609) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (36609) MQTT: TOPIC=esp32/command[0m
+[0;32mI (36609) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":694,"timerCount":"ปิด(10:49)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;32mI (37219) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (37219) MQTT: TOPIC=esp32/command[0m
+[0;32mI (37219) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":692,"timerCount":"ปิด(10:48)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;33mW (37359) DHT11: Timeout at bit 11 waiting for HIGH[0m
+[0;32mI (37359) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (37359) MQTT: TOPIC=esp32/command[0m
+[0;32mI (37369) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":692,"timerCount":"ปิด(10:48)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;33mW (37379) DHT11: Failed to read from DHT11[0m
+[0;32mI (41109) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (41109) MQTT: TOPIC=esp32/command[0m
+[0;32mI (41109) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":678,"timerCount":"ปิด(10:45)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;33mW (42399) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (42399) DHT11: Failed to read from DHT11[0m
+[0;33mW (47419) DHT11: Timeout at bit 39 waiting for LOW[0m
+[0;33mW (47419) DHT11: Failed to read from DHT11[0m
+[0;32mI (49509) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (49509) MQTT: TOPIC=esp32/command[0m
+[0;32mI (49509) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":694,"timerCount":"ปิด(10:40)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;32mI (49529) MQTT: MQTT_EVENT_DATA[0m
+[0;32mI (49529) MQTT: TOPIC=esp32/command[0m
+[0;32mI (49529) MQTT: DATA={"Sensor_Humi":87,"Sensor_Temp":26,"Sensor_lux":0,"Sensor_EC":674,"timerCount":"ปิด(10:39)","PUMP":"OFF","FOG":"OFF","DOSE":"OFF","LIGHT":"ON","auto/manual":"auto"}[0m
+[0;33mW (52439) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (52439) DHT11: Failed to read from DHT11[0m
+[0;33mW (57459) DHT11: Timeout at bit 39 waiting for LOW[0m
+[0;33mW (57459) DHT11: Failed to read from DHT11[0m
+[0;33mW (62479) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (62479) DHT11: Failed to read from DHT11[0m

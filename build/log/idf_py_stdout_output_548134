@@ -1,0 +1,92 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08338h ( 33592) map[0m
+[0;32mI (99) esp_image: segment 1: paddr=00018360 vaddr=3ffb0000 size=02208h (  8712) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001a570 vaddr=40080000 size=05aa8h ( 23208) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=114b8h ( 70840) map[0m
+[0;32mI (139) esp_image: segment 4: paddr=000314e0 vaddr=40085aa8 size=07060h ( 28768) load[0m
+[0;32mI (150) esp_image: segment 5: paddr=00038548 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (157) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (157) boot: Disabling RNG early entropy source...[0m
+[0;32mI (168) cpu_start: Multicore app[0m
+[0;32mI (177) cpu_start: Pro cpu start user code[0m
+[0;32mI (177) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (177) app_init: Application information:[0m
+[0;32mI (177) app_init: Project name:     hello_world[0m
+[0;32mI (181) app_init: App version:      1[0m
+[0;32mI (184) app_init: Compile time:     Nov 27 2025 18:23:12[0m
+[0;32mI (189) app_init: ELF file SHA256:  b87b4d49b...[0m
+[0;32mI (194) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (198) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (201) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (205) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (209) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (216) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 3FFB2A70 len 0002D590 (181 KiB): DRAM[0m
+[0;32mI (226) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (231) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (237) heap_init: At 4008CB08 len 000134F8 (77 KiB): IRAM[0m
+[0;32mI (243) spi_flash: detected chip: generic[0m
+[0;32mI (246) spi_flash: flash io: dio[0m
+[0;33mW (249) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (261) main_task: Started on CPU0[0m
+[0;32mI (271) main_task: Calling app_main()[0m
+[0;32mI (271) DHT11: DHT11 Temperature Monitor with Buzzer Alert[0m
+[0;32mI (271) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (271) BUZZER: Testing buzzer - trying different frequencies...[0m
+[0;32mI (281) BUZZER: Beeping at 2000 Hz for 500 ms[0m
+[0;32mI (781) BUZZER: Beep complete[0m
+[0;32mI (1081) BUZZER: Beeping at 3000 Hz for 500 ms[0m
+[0;32mI (1581) BUZZER: Beep complete[0m
+[0;32mI (1881) BUZZER: Beeping at 4000 Hz for 500 ms[0m
+[0;32mI (2381) BUZZER: Beep complete[0m
+[0;33mW (2901) DHT11: Timeout at bit 39 waiting for LOW[0m
+[0;33mW (2901) DHT11: Failed to read from DHT11[0m
+[0;32mI (4921) DHT11: Temperature: 27 °C, Humidity: 54 %[0m
+[0;33mW (4921) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (4921) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (5221) BUZZER: Beep complete[0m
+[0;32mI (5321) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (5621) BUZZER: Beep complete[0m
+[0;32mI (5721) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (6021) BUZZER: Beep complete[0m
+[0;32mI (8041) DHT11: Temperature: 27 °C, Humidity: 54 %[0m
+[0;33mW (8041) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (8041) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (8341) BUZZER: Beep complete[0m
+[0;32mI (8441) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (8741) BUZZER: Beep complete[0m
+[0;32mI (8841) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (9141) BUZZER: Beep complete[0m
+[0;32mI (11161) DHT11: Temperature: 27 °C, Humidity: 54 %[0m
+[0;33mW (11161) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (11161) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (11461) BUZZER: Beep complete[0m
+[0;32mI (11561) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (11861) BUZZER: Beep complete[0m
+[0;32mI (11961) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (12261) BUZZER: Beep complete[0m

@@ -1,0 +1,70 @@
+Command: ninja flash
+[1/5] cd /home/junchannn/esp/hello_world/build/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/junchannn/esp/hello_world/build/partition_table/partition-table.bin /home/junchannn/esp/hello_world/build/hello_world.bin
+hello_world.bin binary size 0xbd530 bytes. Smallest app partition is 0x100000 bytes. 0x42ad0 bytes (26%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/junchannn/esp/hello_world/build/bootloader/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/junchannn/esp/hello_world/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/3] cd /home/junchannn/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/junchannn/esp/esp-idf -D "SERIAL_TOOL=/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/home/junchannn/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/junchannn/esp/hello_world/build -P /home/junchannn/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:1c:3c:f6:1f:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16489...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075f7... (100 %)
+Wrote 26240 bytes (16489 compressed) at 0x00001000 in 0.6 seconds (effective 376.1 kbit/s)...
+Hash of data verified.
+Compressed 775472 bytes to 485180...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c6ba... (6 %)
+Writing at 0x00025103... (10 %)
+Writing at 0x0002fc60... (13 %)
+Writing at 0x00035544... (16 %)
+Writing at 0x0003b6fa... (20 %)
+Writing at 0x0004153f... (23 %)
+Writing at 0x00047515... (26 %)
+Writing at 0x0004d025... (30 %)
+Writing at 0x000530a9... (33 %)
+Writing at 0x00058544... (36 %)
+Writing at 0x0005e121... (40 %)
+Writing at 0x00063c0f... (43 %)
+Writing at 0x00069454... (46 %)
+Writing at 0x0006eabc... (50 %)
+Writing at 0x000745b5... (53 %)
+Writing at 0x0007a573... (56 %)
+Writing at 0x0007fdb9... (60 %)
+Writing at 0x0008596f... (63 %)
+Writing at 0x0008b700... (66 %)
+Writing at 0x00090f8e... (70 %)
+Writing at 0x00096cf2... (73 %)
+Writing at 0x0009c815... (76 %)
+Writing at 0x000a2142... (80 %)
+Writing at 0x000ab7df... (83 %)
+Writing at 0x000b285a... (86 %)
+Writing at 0x000b8881... (90 %)
+Writing at 0x000be46a... (93 %)
+Writing at 0x000c47f7... (96 %)
+Writing at 0x000c9a9d... (100 %)
+Wrote 775472 bytes (485180 compressed) at 0x00010000 in 9.4 seconds (effective 662.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1254.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

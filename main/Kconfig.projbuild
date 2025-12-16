@@ -1,0 +1,26 @@
+menu "WiFi & MQTT Configuration"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "YourWiFiSSID"
+        help
+            SSID (network name) for the example to connect to.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default "YourWiFiPassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config MQTT_BROKER_URL
+        string "MQTT Broker URL"
+        default "mqtt://test.mosquitto.org"
+        help
+            URL of the MQTT broker to connect to.
+            Examples:
+            - mqtt://test.mosquitto.org (public test broker)
+            - mqtt://broker.hivemq.com (public test broker)
+            - mqtt://192.168.1.100:1883 (local broker)
+            - mqtts://yourdomain.com (secure connection)
+
+endmenu

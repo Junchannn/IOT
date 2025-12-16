@@ -1,0 +1,656 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ed98h (126360) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0002edc0 vaddr=3ffb0000 size=01258h (  4696) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a0a84h (658052) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d0aac vaddr=3ffb1258 size=02cc4h ( 11460) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000d3778 vaddr=40080000 size=17f48h ( 98120) load[0m
+[0;32mI (403) esp_image: segment 5: paddr=000eb6c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu start user code[0m
+[0;32mI (434) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (434) app_init: Application information:[0m
+[0;32mI (434) app_init: Project name:     hello_world[0m
+[0;32mI (438) app_init: App version:      1[0m
+[0;32mI (441) app_init: Compile time:     Dec 12 2025 19:46:37[0m
+[0;32mI (446) app_init: ELF file SHA256:  76fb87650...[0m
+[0;32mI (451) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (455) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (458) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (473) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (478) heap_init: At 3FFB8600 len 00027A00 (158 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (494) heap_init: At 40097F48 len 000080B8 (32 KiB): IRAM[0m
+[0;32mI (501) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;33mW (506) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (529) MAIN: Starting ESP32 Temperature Monitor[0m
+[0;32mI (549) DHT11: DHT11 Temperature Monitor with WiFi/MQTT[0m
+[0;32mI (549) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (549) BUZZER: Testing buzzer...[0m
+[0;32mI (549) BUZZER: Beeping at 2500 Hz for 200 ms[0m
+[0;32mI (749) BUZZER: Beep complete[0m
+[0;32mI (1249) MAIN: Initializing DHT11 sensor...[0m
+[0;32mI (2249) MAIN: Initializing WiFi...[0m
+[0;32mI (2259) wifi:wifi driver task: 3ffc05d8, prio:23, stack:6656, core=0[0m
+[0;32mI (2269) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (2269) wifi:wifi certification version: v7.0[0m
+[0;32mI (2269) wifi:config NVS flash: enabled[0m
+[0;32mI (2269) wifi:config nano formatting: disabled[0m
+[0;32mI (2279) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2279) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2279) wifi:Init management short buffer num: 32[0m
+[0;32mI (2289) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2289) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2299) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2299) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2309) wifi_init: rx ba win: 6[0m
+[0;32mI (2309) wifi_init: accept mbox: 6[0m
+[0;32mI (2309) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2309) wifi_init: udp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2319) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2329) wifi_init: tcp mss: 1440[0m
+[0;32mI (2329) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2329) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (2339) WiFi: No NVS storage. Using Kconfig credentials.[0m
+[0;32mI (2339) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (2429) wifi:mode : sta (78:1c:3c:f6:1f:fc)[0m
+[0;32mI (2429) wifi:enable tsf[0m
+[0;32mI (2439) WiFi: WiFi initialization finished. Connecting to JUNCHANNN...[0m
+[0;32mI (2449) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2449) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2459) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2469) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2489) wifi:connected with JUNCHANNN, aid = 2, channel 11, BW20, bssid = 2a:d0:ea:25:31:72[0m
+[0;32mI (2489) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (2499) wifi:pm start, type: 1[0m
+
+[0;32mI (2499) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2579) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3539) esp_netif_handlers: sta ip: 192.168.137.250, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (3539) WiFi: Got IP:192.168.137.250[0m
+[0;32mI (3539) WiFi: Connected to WiFi[0m
+[0;32mI (3539) MAIN: WiFi connected successfully[0m
+[0;32mI (3539) MAIN: Starting MQTT client...[0m
+[0;32mI (3549) MQTT: Connecting to MQTT broker: mqtt://localhost:1883[0m
+[0;32mI (3559) MQTT: MQTT client started[0m
+[1;31mE (3559) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (3559) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (3569) mqtt_client: Error transport connect[0m
+[0;32mI (3569) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (3579) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5579) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (5579) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=34053)[0m
+[0;32mI (5579) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (10599) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (10599) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=7251)[0m
+[0;32mI (10599) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (15619) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (15619) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=45168)[0m
+[0;32mI (15619) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (18579) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (18579) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18579) mqtt_client: Error transport connect[0m
+[0;32mI (18589) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (18589) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (20639) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (20639) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=26607)[0m
+[0;32mI (20639) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (25659) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (25659) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=2992)[0m
+[0;32mI (25659) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (30679) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (30679) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=23142)[0m
+[0;32mI (30679) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (33589) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (33589) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (33589) mqtt_client: Error transport connect[0m
+[0;32mI (33599) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (33599) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (35699) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (35699) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=22319)[0m
+[0;32mI (35699) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (40719) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (40719) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=20920)[0m
+[0;32mI (40719) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (45739) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (45739) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=48814)[0m
+[0;32mI (45739) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (48599) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (48599) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (48599) mqtt_client: Error transport connect[0m
+[0;32mI (48609) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (48609) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (50759) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (50759) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=9033)[0m
+[0;32mI (50759) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (55779) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (55779) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=8405)[0m
+[0;32mI (55779) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (60799) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (60799) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=29336)[0m
+[0;32mI (60799) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (63609) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (63609) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (63609) mqtt_client: Error transport connect[0m
+[0;32mI (63619) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (63619) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (65819) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (65819) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=58274)[0m
+[0;32mI (65819) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (70839) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (70839) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=49651)[0m
+[0;32mI (70839) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (75859) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (75859) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=2174)[0m
+[0;32mI (75859) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (78619) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (78619) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (78619) mqtt_client: Error transport connect[0m
+[0;32mI (78629) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (78629) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (80879) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (80879) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=11293)[0m
+[0;32mI (80879) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (85899) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (85899) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=18698)[0m
+[0;32mI (85899) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (90919) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (90919) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=51272)[0m
+[0;32mI (90919) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (93629) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (93629) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (93629) mqtt_client: Error transport connect[0m
+[0;32mI (93639) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (93639) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (95939) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (95939) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=44327)[0m
+[0;32mI (95939) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (100959) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (100959) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=56596)[0m
+[0;32mI (100959) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (105979) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (105979) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=9320)[0m
+[0;32mI (105979) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (108639) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (108639) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (108639) mqtt_client: Error transport connect[0m
+[0;32mI (108649) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (108649) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (110999) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (110999) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=30980)[0m
+[0;32mI (110999) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (116019) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (116019) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=11421)[0m
+[0;32mI (116019) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (121039) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (121039) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=29816)[0m
+[0;32mI (121039) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (123649) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (123649) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (123649) mqtt_client: Error transport connect[0m
+[0;32mI (123659) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (123659) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (126059) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (126059) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=54623)[0m
+[0;32mI (126059) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (131079) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (131079) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=4101)[0m
+[0;32mI (131079) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (136099) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (136099) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=11772)[0m
+[0;32mI (136099) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (138659) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (138659) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (138659) mqtt_client: Error transport connect[0m
+[0;32mI (138669) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (138669) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (141119) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (141119) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=29136)[0m
+[0;32mI (141119) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (146139) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (146139) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=49750)[0m
+[0;32mI (146139) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (151159) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (151159) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=15165)[0m
+[0;32mI (151159) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (153669) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (153669) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (153669) mqtt_client: Error transport connect[0m
+[0;32mI (153679) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (153679) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (156179) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (156179) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=54792)[0m
+[0;32mI (156179) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (161199) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (161199) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=16366)[0m
+[0;32mI (161199) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;33mW (166219) DHT11: DHT11 CRC error - data corrupted[0m
+[1;31mE (168679) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (168679) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (168679) mqtt_client: Error transport connect[0m
+[0;32mI (168689) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (168689) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (171239) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (171239) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=8530)[0m
+[0;32mI (171239) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (176259) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (176259) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=21945)[0m
+[0;32mI (176259) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;33mW (181279) DHT11: DHT11 CRC error - data corrupted[0m
+[1;31mE (183689) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (183689) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (183689) mqtt_client: Error transport connect[0m
+[0;32mI (183699) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (183699) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (186299) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (186299) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=1581)[0m
+[0;32mI (186299) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (191319) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (191319) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=1511)[0m
+[0;32mI (191319) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (196339) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (196339) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=51762)[0m
+[0;32mI (196339) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (198699) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (198699) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (198699) mqtt_client: Error transport connect[0m
+[0;32mI (198709) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (198709) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (201359) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (201359) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=48698)[0m
+[0;32mI (201359) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (206379) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (206379) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=7744)[0m
+[0;32mI (206379) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (211399) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (211399) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=23766)[0m
+[0;32mI (211399) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (213709) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (213709) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (213709) mqtt_client: Error transport connect[0m
+[0;32mI (213719) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (213719) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (216419) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (216419) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=32917)[0m
+[0;32mI (216419) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (221439) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (221439) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=34888)[0m
+[0;32mI (221439) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (226459) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (226459) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61120)[0m
+[0;32mI (226459) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (228719) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (228719) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (228719) mqtt_client: Error transport connect[0m
+[0;32mI (228729) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (228729) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (231479) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (231479) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=36839)[0m
+[0;32mI (231479) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (236499) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (236499) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=5991)[0m
+[0;32mI (236499) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (241519) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (241519) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=63439)[0m
+[0;32mI (241519) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (243729) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (243729) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (243729) mqtt_client: Error transport connect[0m
+[0;32mI (243739) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (243739) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (246539) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (246539) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=9995)[0m
+[0;32mI (246539) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (251559) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (251559) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=535)[0m
+[0;32mI (251559) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (256579) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (256579) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=35926)[0m
+[0;32mI (256579) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (258739) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (258739) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (258739) mqtt_client: Error transport connect[0m
+[0;32mI (258749) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (258749) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (261599) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (261599) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=2425)[0m
+[0;32mI (261599) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (266619) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (266619) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33397)[0m
+[0;32mI (266619) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (271639) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (271639) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12453)[0m
+[0;32mI (271639) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (273749) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (273749) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (273749) mqtt_client: Error transport connect[0m
+[0;32mI (273759) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (273759) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (276659) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (276659) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=17777)[0m
+[0;32mI (276659) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (281679) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (281679) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=373)[0m
+[0;32mI (281679) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (283769) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (283769) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (283769) mqtt_client: Error transport connect[0m
+[0;32mI (283779) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (283779) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (286699) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (286699) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=46088)[0m
+[0;32mI (286699) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (291719) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (291719) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=60998)[0m
+[0;32mI (291719) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (296739) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (296739) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=38918)[0m
+[0;32mI (296739) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (298779) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (298779) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (298779) mqtt_client: Error transport connect[0m
+[0;32mI (298789) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (298789) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (301759) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (301759) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=13712)[0m
+[0;32mI (301759) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (306779) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (306779) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=8556)[0m
+[0;32mI (306779) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (311799) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (311799) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=62984)[0m
+[0;32mI (311799) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (313789) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (313789) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (313789) mqtt_client: Error transport connect[0m
+[0;32mI (313799) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (313799) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (316819) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (316819) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61417)[0m
+[0;32mI (316819) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (321839) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (321839) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=42088)[0m
+[0;32mI (321839) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (326859) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (326859) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=1463)[0m
+[0;32mI (326859) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (328799) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (328799) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (328799) mqtt_client: Error transport connect[0m
+[0;32mI (328809) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (328809) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (331879) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (331879) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=3377)[0m
+[0;32mI (331879) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (336899) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (336899) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=30240)[0m
+[0;32mI (336899) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (341919) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (341919) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=34042)[0m
+[0;32mI (341919) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (343809) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (343809) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (343809) mqtt_client: Error transport connect[0m
+[0;32mI (343819) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (343819) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (346939) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (346939) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=52741)[0m
+[0;32mI (346939) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (351959) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (351959) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=65317)[0m
+[0;32mI (351959) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (356979) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (356979) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=26056)[0m
+[0;32mI (356979) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (358819) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (358819) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (358819) mqtt_client: Error transport connect[0m
+[0;32mI (358829) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (358829) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (361999) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (361999) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=30369)[0m
+[0;32mI (361999) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (367019) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (367019) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=28255)[0m
+[0;32mI (367019) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (372039) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (372039) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=54275)[0m
+[0;32mI (372039) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (373829) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (373829) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (373829) mqtt_client: Error transport connect[0m
+[0;32mI (373839) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (373839) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (377059) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (377059) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=34620)[0m
+[0;32mI (377059) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (382079) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (382079) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=39158)[0m
+[0;32mI (382079) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (387099) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (387099) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=56182)[0m
+[0;32mI (387099) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (388839) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (388839) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (388839) mqtt_client: Error transport connect[0m
+[0;32mI (388849) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (388849) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (392119) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (392119) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=42341)[0m
+[0;32mI (392119) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (397139) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (397139) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=15250)[0m
+[0;32mI (397139) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (402159) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (402159) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=62069)[0m
+[0;32mI (402159) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (403849) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (403849) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (403849) mqtt_client: Error transport connect[0m
+[0;32mI (403859) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (403859) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (407179) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (407179) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=45949)[0m
+[0;32mI (407179) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (412199) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (412199) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=17612)[0m
+[0;32mI (412199) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (417219) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (417219) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=57078)[0m
+[0;32mI (417219) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (418859) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (418859) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (418859) mqtt_client: Error transport connect[0m
+[0;32mI (418869) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (418869) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (422239) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (422239) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=3826)[0m
+[0;32mI (422239) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (427259) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (427259) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=58684)[0m
+[0;32mI (427259) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (432279) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (432279) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=47296)[0m
+[0;32mI (432279) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (433869) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (433869) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (433869) mqtt_client: Error transport connect[0m
+[0;32mI (433879) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (433879) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (437299) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (437299) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=58372)[0m
+[0;32mI (437299) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (442319) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (442319) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=29228)[0m
+[0;32mI (442319) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (447339) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (447339) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=20832)[0m
+[0;32mI (447339) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (448879) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (448879) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (448879) mqtt_client: Error transport connect[0m
+[0;32mI (448889) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (448889) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (452359) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (452359) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=20846)[0m
+[0;32mI (452359) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (457379) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (457379) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=35176)[0m
+[0;32mI (457379) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (462399) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (462399) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=19707)[0m
+[0;32mI (462399) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (463889) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (463889) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (463889) mqtt_client: Error transport connect[0m
+[0;32mI (463899) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (463899) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (467419) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (467419) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=20231)[0m
+[0;32mI (467419) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (472439) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (472439) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=11552)[0m
+[0;32mI (472439) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (477459) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (477459) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=33695)[0m
+[0;32mI (477459) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (478899) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (478899) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (478899) mqtt_client: Error transport connect[0m
+[0;32mI (478909) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (478909) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (482479) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (482479) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=42195)[0m
+[0;32mI (482479) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (487499) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (487499) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=23832)[0m
+[0;32mI (487499) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (492519) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (492519) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=31894)[0m
+[0;32mI (492519) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (493909) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (493909) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (493909) mqtt_client: Error transport connect[0m
+[0;32mI (493919) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (493919) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (497539) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (497539) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=2441)[0m
+[0;32mI (497539) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (502559) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (502559) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33702)[0m
+[0;32mI (502559) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (507579) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (507579) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=59431)[0m
+[0;32mI (507579) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (508919) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (508919) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (508919) mqtt_client: Error transport connect[0m
+[0;32mI (508929) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (508929) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (512599) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (512599) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=49686)[0m
+[0;32mI (512599) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (517619) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (517619) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=47136)[0m
+[0;32mI (517619) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (522639) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (522639) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=3586)[0m
+[0;32mI (522639) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (523929) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (523929) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (523929) mqtt_client: Error transport connect[0m
+[0;32mI (523939) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (523939) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (527659) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (527659) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=35382)[0m
+[0;32mI (527659) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (532679) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (532679) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=51974)[0m
+[0;32mI (532679) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (537699) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (537699) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=39163)[0m
+[0;32mI (537699) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (538939) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (538939) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (538939) mqtt_client: Error transport connect[0m
+[0;32mI (538949) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (538949) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (542719) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (542719) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=32551)[0m
+[0;32mI (542719) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (547739) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (547739) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=4415)[0m
+[0;32mI (547739) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (552759) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (552759) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=21229)[0m
+[0;32mI (552759) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (553949) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (553949) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (553949) mqtt_client: Error transport connect[0m
+[0;32mI (553959) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (553959) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (557779) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (557779) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=7639)[0m
+[0;32mI (557779) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (562799) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (562799) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=46937)[0m
+[0;32mI (562799) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (567819) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (567819) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=7930)[0m
+[0;32mI (567819) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (568959) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (568959) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (568959) mqtt_client: Error transport connect[0m
+[0;32mI (568969) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (568969) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (572839) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (572839) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12036)[0m
+[0;32mI (572839) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (577859) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (577859) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=27407)[0m
+[0;32mI (577859) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (582879) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (582879) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=43356)[0m
+[0;32mI (582879) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[1;31mE (583969) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (583969) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (583969) mqtt_client: Error transport connect[0m
+[0;32mI (583979) MQTT: MQTT_EVENT_ERROR[0m
+[0;32mI (583979) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (587899) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (587899) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=65020)[0m
+[0;32mI (587899) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m

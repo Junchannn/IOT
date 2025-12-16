@@ -1,0 +1,13 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Minimal build - ON
+-- git describe returned 'fatal: bad revision 'HEAD''
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/pcap (1.0.2)
+NOTICE: [2/2] idf (5.5.1)
+-- Configuring incomplete, errors occurred!
+See also "/home/junchannn/esp/hello_world/build/CMakeFiles/CMakeOutput.log".
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/junchannn/esp/hello_world -B/home/junchannn/esp/hello_world/build

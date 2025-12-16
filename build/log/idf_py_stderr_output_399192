@@ -1,0 +1,2 @@
+Command: ninja menuconfi
+ninja: error: unknown target 'menuconfi', did you mean 'menuconfig'?

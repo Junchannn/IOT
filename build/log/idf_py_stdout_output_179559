@@ -1,0 +1,118 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2029ch (131740) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=000302c4 vaddr=3ffb0000 size=03f1ch ( 16156) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=000341e8 vaddr=40080000 size=0be30h ( 48688) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2574h (664948) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000e259c vaddr=4008be30 size=0c700h ( 50944) load[0m
+[0;32mI (406) esp_image: segment 5: paddr=000eeca4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (418) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (418) boot: Disabling RNG early entropy source...[0m
+[0;32mI (429) cpu_start: Multicore app[0m
+[0;32mI (437) cpu_start: Pro cpu start user code[0m
+[0;32mI (437) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (437) app_init: Application information:[0m
+[0;32mI (437) app_init: Project name:     hello_world[0m
+[0;32mI (441) app_init: App version:      1[0m
+[0;32mI (445) app_init: Compile time:     Dec  2 2025 18:04:30[0m
+[0;32mI (450) app_init: ELF file SHA256:  c7741fa4f...[0m
+[0;32mI (454) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (458) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (462) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (466) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (470) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (476) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (481) heap_init: At 3FFB8758 len 000278A8 (158 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (492) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 40098530 len 00007AD0 (30 KiB): IRAM[0m
+[0;32mI (504) spi_flash: detected chip: generic[0m
+[0;32mI (506) spi_flash: flash io: dio[0m
+[0;33mW (509) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (522) main_task: Started on CPU0[0m
+[0;32mI (532) main_task: Calling app_main()[0m
+[0;32mI (532) MAIN: Starting ESP32 Temperature Monitor[0m
+[0;32mI (552) DHT11: DHT11 Temperature Monitor with WiFi/MQTT[0m
+[0;32mI (552) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (552) BUZZER: Testing buzzer...[0m
+[0;32mI (552) BUZZER: Beeping at 2500 Hz for 200 ms[0m
+[0;32mI (752) BUZZER: Beep complete[0m
+[0;32mI (1252) MAIN: Initializing WiFi...[0m
+[0;32mI (1262) wifi:wifi driver task: 3ffc1098, prio:23, stack:6656, core=0[0m
+[0;32mI (1272) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (1272) wifi:wifi certification version: v7.0[0m
+[0;32mI (1272) wifi:config NVS flash: enabled[0m
+[0;32mI (1272) wifi:config nano formatting: disabled[0m
+[0;32mI (1282) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1282) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1282) wifi:Init management short buffer num: 32[0m
+[0;32mI (1292) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1292) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1302) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1302) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1312) wifi_init: rx ba win: 6[0m
+[0;32mI (1312) wifi_init: accept mbox: 6[0m
+[0;32mI (1312) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1312) wifi_init: udp mbox: 6[0m
+[0;32mI (1322) wifi_init: tcp mbox: 6[0m
+[0;32mI (1322) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1322) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1332) wifi_init: tcp mss: 1440[0m
+[0;32mI (1332) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1332) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (1342) WiFi: No NVS storage. Using Kconfig credentials.[0m
+[0;32mI (1342) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1432) wifi:mode : sta (78:1c:3c:f6:1f:fc)[0m
+[0;32mI (1432) wifi:enable tsf[0m
+[0;32mI (1442) WiFi: WiFi initialization finished. Connecting to Kietwifi...[0m
+[0;32mI (3852) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (3862) WiFi: Connect to WiFi failed[0m
+[0;32mI (6272) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (6272) WiFi: Connect to WiFi failed[0m
+[0;32mI (8682) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (8682) WiFi: Connect to WiFi failed[0m
+[0;32mI (11102) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (11102) WiFi: Connect to WiFi failed[0m
+[0;32mI (13512) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (13512) WiFi: Connect to WiFi failed[0m
+[0;32mI (14732) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (14732) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (15742) wifi:state: auth -> init (0x200)[0m
+[0;32mI (15752) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (15752) WiFi: Connect to WiFi failed[0m
+[1;31mE (15752) WiFi: Failed to connect to WiFi[0m
+[0;33mW (15752) MAIN: WiFi connection failed. Running in offline mode.[0m
+[0;33mW (15782) DHT11: Timeout at bit 38 waiting for LOW[0m
+[0;33mW (15782) DHT11: Failed to read from DHT11[0m
+[0;32mI (20802) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (20802) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (25822) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (25822) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (30842) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (30842) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (35862) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (35862) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m

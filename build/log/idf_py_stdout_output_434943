@@ -1,0 +1,388 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ed88h (126344) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0002edb0 vaddr=3ffb0000 size=01268h (  4712) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a0a98h (658072) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d0ac0 vaddr=3ffb1268 size=02cb4h ( 11444) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000d377c vaddr=40080000 size=17f48h ( 98120) load[0m
+[0;32mI (403) esp_image: segment 5: paddr=000eb6cc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu start user code[0m
+[0;32mI (434) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (434) app_init: Application information:[0m
+[0;32mI (434) app_init: Project name:     hello_world[0m
+[0;32mI (438) app_init: App version:      1[0m
+[0;32mI (441) app_init: Compile time:     Dec 11 2025 23:47:04[0m
+[0;32mI (446) app_init: ELF file SHA256:  1d2487766...[0m
+[0;32mI (451) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (455) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (458) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (473) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (478) heap_init: At 3FFB8600 len 00027A00 (158 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (494) heap_init: At 40097F48 len 000080B8 (32 KiB): IRAM[0m
+[0;32mI (501) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;33mW (506) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (529) MAIN: Starting ESP32 Temperature Monitor[0m
+[0;32mI (549) DHT11: DHT11 Temperature Monitor with WiFi/MQTT[0m
+[0;32mI (549) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (549) BUZZER: Testing buzzer...[0m
+[0;32mI (549) BUZZER: Beeping at 2500 Hz for 200 ms[0m
+[0;32mI (749) BUZZER: Beep complete[0m
+[0;32mI (1249) MAIN: Initializing DHT11 sensor...[0m
+[0;32mI (2249) MAIN: Initializing WiFi...[0m
+[0;32mI (2259) wifi:wifi driver task: 3ffc065c, prio:23, stack:6656, core=0[0m
+[0;32mI (2269) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (2269) wifi:wifi certification version: v7.0[0m
+[0;32mI (2269) wifi:config NVS flash: enabled[0m
+[0;32mI (2269) wifi:config nano formatting: disabled[0m
+[0;32mI (2279) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2279) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2279) wifi:Init management short buffer num: 32[0m
+[0;32mI (2289) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2289) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2299) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2299) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2309) wifi_init: rx ba win: 6[0m
+[0;32mI (2309) wifi_init: accept mbox: 6[0m
+[0;32mI (2309) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2309) wifi_init: udp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2319) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2329) wifi_init: tcp mss: 1440[0m
+[0;32mI (2329) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2329) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (2339) WiFi: No NVS storage. Using Kconfig credentials.[0m
+[0;32mI (2339) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (2429) wifi:mode : sta (78:1c:3c:f6:1f:fc)[0m
+[0;32mI (2429) wifi:enable tsf[0m
+[0;32mI (2439) WiFi: WiFi initialization finished. Connecting to Kietwifi...[0m
+[0;32mI (2449) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2449) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2459) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2459) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2539) wifi:state: run -> init (0x3c0)[0m
+[0;32mI (2549) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2549) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (2549) WiFi: Connect to WiFi failed[0m
+[0;33mW (2769) wifi:tx null, bss is null[0m
+[0;32mI (4969) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (4969) WiFi: Connect to WiFi failed[0m
+[0;32mI (4999) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4999) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (5049) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (5059) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (5099) wifi:connected with Kietwifi, aid = 1, channel 1, BW20, bssid = c2:e1:63:3d:98:08[0m
+[0;32mI (5109) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (5109) wifi:pm start, type: 1[0m
+
+[0;32mI (5109) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5139) wifi:<ba-add>idx:0 (ifx:0, c2:e1:63:3d:98:08), tid:0, ssn:0, winSize:64[0m
+[0;32mI (5199) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (5199) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (6159) esp_netif_handlers: sta ip: 10.166.210.225, mask: 255.255.255.0, gw: 10.166.210.31[0m
+[0;32mI (6159) WiFi: Got IP:10.166.210.225[0m
+[0;32mI (6159) WiFi: Connected to WiFi[0m
+[0;32mI (6159) MAIN: WiFi connected successfully[0m
+[0;32mI (6159) MAIN: Starting MQTT client...[0m
+[0;32mI (6169) MQTT: Connecting to MQTT broker: mqtt://0.tcp.jp.ngrok.io:17586[0m
+[0;32mI (6179) MQTT: MQTT client started[0m
+[0;32mI (7049) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7459) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=64109[0m
+[0;32mI (8199) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (8199) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=61945)[0m
+[0;33mW (8199) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (8209) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (8519) BUZZER: Beep complete[0m
+[0;32mI (8619) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (8929) BUZZER: Beep complete[0m
+[0;32mI (9029) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (9329) BUZZER: Beep complete[0m
+[0;32mI (14349) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (14359) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=34115)[0m
+[0;33mW (14359) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (14359) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (14669) BUZZER: Beep complete[0m
+[0;32mI (14769) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (15079) BUZZER: Beep complete[0m
+[0;32mI (15179) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (15479) BUZZER: Beep complete[0m
+[0;32mI (20499) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (20499) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=4862)[0m
+[0;33mW (20509) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (20509) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (20819) BUZZER: Beep complete[0m
+[0;32mI (20919) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (21229) BUZZER: Beep complete[0m
+[0;32mI (21329) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (21629) BUZZER: Beep complete[0m
+[0;32mI (26649) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (26649) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=25987)[0m
+[0;33mW (26659) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (26659) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (26969) BUZZER: Beep complete[0m
+[0;32mI (27069) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (27379) BUZZER: Beep complete[0m
+[0;32mI (27479) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (27779) BUZZER: Beep complete[0m
+[0;32mI (32799) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (32799) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=42073)[0m
+[0;33mW (32809) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (32809) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (33119) BUZZER: Beep complete[0m
+[0;32mI (33219) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (33529) BUZZER: Beep complete[0m
+[0;32mI (33629) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (33929) BUZZER: Beep complete[0m
+[0;32mI (38949) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (38949) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=47317)[0m
+[0;33mW (38959) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (38959) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (39269) BUZZER: Beep complete[0m
+[0;32mI (39369) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (39679) BUZZER: Beep complete[0m
+[0;32mI (39779) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (40079) BUZZER: Beep complete[0m
+[0;32mI (45099) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (45099) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=15303)[0m
+[0;33mW (45109) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (45109) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (45419) BUZZER: Beep complete[0m
+[0;32mI (45519) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (45829) BUZZER: Beep complete[0m
+[0;32mI (45929) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (46229) BUZZER: Beep complete[0m
+[0;32mI (51249) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (51249) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=50168)[0m
+[0;33mW (51259) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (51259) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (51569) BUZZER: Beep complete[0m
+[0;32mI (51669) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (51979) BUZZER: Beep complete[0m
+[0;32mI (52079) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (52379) BUZZER: Beep complete[0m
+[0;32mI (57399) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (57399) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=64547)[0m
+[0;33mW (57409) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (57409) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (57719) BUZZER: Beep complete[0m
+[0;32mI (57819) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (58129) BUZZER: Beep complete[0m
+[0;32mI (58229) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (58529) BUZZER: Beep complete[0m
+[0;32mI (63549) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (63549) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=20272)[0m
+[0;33mW (63559) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (63559) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (63869) BUZZER: Beep complete[0m
+[0;32mI (63969) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (64279) BUZZER: Beep complete[0m
+[0;32mI (64379) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (64679) BUZZER: Beep complete[0m
+[0;32mI (69699) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (69709) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=49069)[0m
+[0;33mW (69709) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (69709) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (70019) BUZZER: Beep complete[0m
+[0;32mI (70119) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (70429) BUZZER: Beep complete[0m
+[0;32mI (70529) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (70829) BUZZER: Beep complete[0m
+[0;32mI (75849) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (75849) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=15654)[0m
+[0;33mW (75859) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (75859) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (76169) BUZZER: Beep complete[0m
+[0;32mI (76269) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (76579) BUZZER: Beep complete[0m
+[0;32mI (76679) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (76979) BUZZER: Beep complete[0m
+[0;32mI (81999) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (82009) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=30294)[0m
+[0;33mW (82009) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (82009) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (82319) BUZZER: Beep complete[0m
+[0;32mI (82419) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (82729) BUZZER: Beep complete[0m
+[0;32mI (82829) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (83129) BUZZER: Beep complete[0m
+[0;32mI (88149) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (88149) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=54072)[0m
+[0;33mW (88159) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (88159) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (88469) BUZZER: Beep complete[0m
+[0;32mI (88569) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (88869) BUZZER: Beep complete[0m
+[0;32mI (88969) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (89269) BUZZER: Beep complete[0m
+[0;33mW (94289) DHT11: DHT11 CRC error - data corrupted[0m
+[0;32mI (99309) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (99309) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=662)[0m
+[0;33mW (99319) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (99319) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (99629) BUZZER: Beep complete[0m
+[0;32mI (99729) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (100029) BUZZER: Beep complete[0m
+[0;32mI (100129) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (100429) BUZZER: Beep complete[0m
+[0;32mI (105449) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (105449) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=10692)[0m
+[0;33mW (105459) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (105459) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (105769) BUZZER: Beep complete[0m
+[0;32mI (105869) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (106179) BUZZER: Beep complete[0m
+[0;32mI (106279) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (106579) BUZZER: Beep complete[0m
+[0;32mI (111599) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (111609) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=30596)[0m
+[0;33mW (111609) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (111609) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (111919) BUZZER: Beep complete[0m
+[0;32mI (112019) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (112319) BUZZER: Beep complete[0m
+[0;32mI (112419) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (112719) BUZZER: Beep complete[0m
+[0;32mI (117739) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (117739) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=65418)[0m
+[0;33mW (117739) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (117749) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (118059) BUZZER: Beep complete[0m
+[0;32mI (118159) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (118469) BUZZER: Beep complete[0m
+[0;32mI (118569) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (118869) BUZZER: Beep complete[0m
+[0;32mI (123889) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (123899) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=12394)[0m
+[0;33mW (123899) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (123899) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (124209) BUZZER: Beep complete[0m
+[0;32mI (124309) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (124609) BUZZER: Beep complete[0m
+[0;32mI (124709) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (125009) BUZZER: Beep complete[0m
+[0;33mW (130029) DHT11: DHT11 CRC error - data corrupted[0m
+[0;32mI (135049) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (135059) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=29941)[0m
+[0;33mW (135059) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (135059) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (135369) BUZZER: Beep complete[0m
+[0;32mI (135469) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (135769) BUZZER: Beep complete[0m
+[0;32mI (135869) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (136169) BUZZER: Beep complete[0m
+[0;32mI (141189) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (141189) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=25287)[0m
+[0;33mW (141199) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (141199) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (141509) BUZZER: Beep complete[0m
+[0;32mI (141609) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (141919) BUZZER: Beep complete[0m
+[0;32mI (142019) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (142319) BUZZER: Beep complete[0m
+[0;32mI (147339) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (147339) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=41667)[0m
+[0;33mW (147349) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (147349) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (147659) BUZZER: Beep complete[0m
+[0;32mI (147759) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (148079) BUZZER: Beep complete[0m
+[0;32mI (148179) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (148479) BUZZER: Beep complete[0m
+[0;32mI (153499) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (153499) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=35640)[0m
+[0;33mW (153509) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (153509) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (153819) BUZZER: Beep complete[0m
+[0;32mI (153919) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (154229) BUZZER: Beep complete[0m
+[0;32mI (154329) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (154629) BUZZER: Beep complete[0m
+[0;32mI (159649) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (159659) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=33877)[0m
+[0;33mW (159659) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (159659) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (159969) BUZZER: Beep complete[0m
+I (160069) BUZZER: Beeping at 3000 Hz for 300 ms
+[0;32mI (160379) BUZZER: Beep complete[0m
+[0;32mI (160479) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (160779) BUZZER: Beep complete[0m
+[0;32mI (165799) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (165799) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=49963)[0m
+[0;33mW (165809) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (165809) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (166119) BUZZER: Beep complete[0m
+[0;32mI (166219) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (166529) BUZZER: Beep complete[0m
+[0;32mI (166629) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (166929) BUZZER: Beep complete[0m
+[0;32mI (171949) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (171959) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=9036)[0m
+[0;33mW (171959) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (171959) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (172269) BUZZER: Beep complete[0m
+[0;32mI (172369) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (172679) BUZZER: Beep complete[0m
+[0;32mI (172779) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (173079) BUZZER: Beep complete[0m
+[0;32mI (178099) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (178099) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=42414)[0m
+[0;33mW (178109) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (178109) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (178419) BUZZER: Beep complete[0m
+[0;32mI (178519) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (178819) BUZZER: Beep complete[0m
+[0;32mI (178929) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (179229) BUZZER: Beep complete[0m
+[0;32mI (184259) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (184259) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=31991)[0m
+[0;33mW (184269) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (184269) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (184579) BUZZER: Beep complete[0m
+[0;32mI (184679) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (184989) BUZZER: Beep complete[0m
+[0;32mI (185089) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (185389) BUZZER: Beep complete[0m
+[0;32mI (190409) DHT11: Temperature: 30 °C, Humidity: 72 %[0m
+[0;32mI (190409) MQTT: Published: {"temperature":30,"humidity":72} (msg_id=19005)[0m
+[0;33mW (190419) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (190419) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (190729) BUZZER: Beep complete[0m
+[0;32mI (190829) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (191139) BUZZER: Beep complete[0m
+[0;32mI (191239) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (191549) BUZZER: Beep complete[0m
+                                                                                                                                                                                                                                                                

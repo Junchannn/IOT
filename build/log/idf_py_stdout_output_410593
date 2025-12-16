@@ -1,0 +1,146 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ed98h (126360) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0002edc0 vaddr=3ffb0000 size=01258h (  4696) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a0a98h (658072) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d0ac0 vaddr=3ffb1258 size=02cc4h ( 11460) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000d378c vaddr=40080000 size=17f48h ( 98120) load[0m
+[0;32mI (403) esp_image: segment 5: paddr=000eb6dc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu start user code[0m
+[0;32mI (434) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (434) app_init: Application information:[0m
+[0;32mI (434) app_init: Project name:     hello_world[0m
+[0;32mI (438) app_init: App version:      1[0m
+[0;32mI (441) app_init: Compile time:     Dec 11 2025 23:32:09[0m
+[0;32mI (446) app_init: ELF file SHA256:  ec237f1c3...[0m
+[0;32mI (451) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (455) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (458) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (473) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (478) heap_init: At 3FFB8600 len 00027A00 (158 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (494) heap_init: At 40097F48 len 000080B8 (32 KiB): IRAM[0m
+[0;32mI (501) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;33mW (506) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (529) MAIN: Starting ESP32 Temperature Monitor[0m
+[0;32mI (549) DHT11: DHT11 Temperature Monitor with WiFi/MQTT[0m
+[0;32mI (549) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (549) BUZZER: Testing buzzer...[0m
+[0;32mI (549) BUZZER: Beeping at 2500 Hz for 200 ms[0m
+[0;32mI (749) BUZZER: Beep complete[0m
+[0;32mI (1249) MAIN: Initializing DHT11 sensor...[0m
+[0;32mI (2249) MAIN: Initializing WiFi...[0m
+[0;32mI (2259) wifi:wifi driver task: 3ffc065c, prio:23, stack:6656, core=0[0m
+[0;32mI (2269) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (2269) wifi:wifi certification version: v7.0[0m
+[0;32mI (2269) wifi:config NVS flash: enabled[0m
+[0;32mI (2269) wifi:config nano formatting: disabled[0m
+[0;32mI (2279) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2279) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2279) wifi:Init management short buffer num: 32[0m
+[0;32mI (2289) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2289) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2299) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2299) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2309) wifi_init: rx ba win: 6[0m
+[0;32mI (2309) wifi_init: accept mbox: 6[0m
+[0;32mI (2309) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2309) wifi_init: udp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2319) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2329) wifi_init: tcp mss: 1440[0m
+[0;32mI (2329) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2329) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (2339) WiFi: No NVS storage. Using Kconfig credentials.[0m
+[0;32mI (2339) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (2429) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (2449) wifi:mode : sta (78:1c:3c:f6:1f:fc)[0m
+[0;32mI (2449) wifi:enable tsf[0m
+[0;32mI (2449) WiFi: WiFi initialization finished. Connecting to Kietwifi...[0m
+[0;32mI (4869) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (4869) WiFi: Connect to WiFi failed[0m
+[0;32mI (7289) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (7289) WiFi: Connect to WiFi failed[0m
+[0;32mI (9699) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (9699) WiFi: Connect to WiFi failed[0m
+[0;32mI (12109) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (12119) WiFi: Connect to WiFi failed[0m
+[0;32mI (14529) WiFi: Retrying to connect to WiFi...[0m
+[0;32mI (14529) WiFi: Connect to WiFi failed[0m
+[0;32mI (16939) WiFi: Connect to WiFi failed[0m
+[1;31mE (16939) WiFi: Failed to connect to WiFi[0m
+[0;33mW (16939) MAIN: WiFi connection failed. Running in offline mode.[0m
+[0;32mI (16969) DHT11: Temperature: 29 °C, Humidity: 76 %[0m
+[0;33mW (16969) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (16969) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (17269) BUZZER: Beep complete[0m
+[0;32mI (17369) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (17669) BUZZER: Beep complete[0m
+[0;32mI (17769) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (18069) BUZZER: Beep complete[0m
+[0;32mI (23089) DHT11: Temperature: 29 °C, Humidity: 76 %[0m
+[0;33mW (23089) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (23089) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (23389) BUZZER: Beep complete[0m
+[0;32mI (23489) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (23789) BUZZER: Beep complete[0m
+[0;32mI (23889) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (24189) BUZZER: Beep complete[0m
+[0;32mI (29209) DHT11: Temperature: 29 °C, Humidity: 76 %[0m
+[0;33mW (29209) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (29209) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (29509) BUZZER: Beep complete[0m
+[0;32mI (29609) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (29909) BUZZER: Beep complete[0m
+[0;32mI (30009) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (30309) BUZZER: Beep complete[0m
+[0;32mI (35329) DHT11: Temperature: 29 °C, Humidity: 76 %[0m
+[0;33mW (35329) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (35329) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (35629) BUZZER: Beep complete[0m
+[0;32mI (35729) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (36029) BUZZER: Beep complete[0m
+[0;32mI (36129) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (36429) BUZZER: Beep complete[0m
+[0;32mI (41449) DHT11: Temperature: 29 °C, Humidity: 76 %[0m
+[0;33mW (41449) DHT11: ⚠️  HIGH TEMPERATURE ALERT! ⚠️[0m
+[0;32mI (41449) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (41749) BUZZER: Beep complete[0m
+[0;32mI (41849) BUZZER: Beeping at 3000 Hz for 300 ms[0m
+[0;32mI (42149) BUZZER: Beep complete[0m
+[0;32mI (42249) BUZZER: Beeping at 2500 Hz for 300 ms[0m
+[0;32mI (42549) BUZZER: Beep complete[0m

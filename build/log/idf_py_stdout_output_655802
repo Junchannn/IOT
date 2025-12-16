@@ -1,0 +1,900 @@
+Command: /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/junchannn/esp/hello_world/build/hello_world.elf /home/junchannn/esp/hello_world/build/bootloader/bootloader.elf -m '/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/junchannn/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 27 2025 18:23:19[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ed98h (126360) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0002edc0 vaddr=3ffb0000 size=01258h (  4696) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a0a84h (658052) map[0m
+[0;32mI (360) esp_image: segment 3: paddr=000d0aac vaddr=3ffb1258 size=02cc4h ( 11460) load[0m
+[0;32mI (364) esp_image: segment 4: paddr=000d3778 vaddr=40080000 size=17f48h ( 98120) load[0m
+[0;32mI (403) esp_image: segment 5: paddr=000eb6c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu start user code[0m
+[0;32mI (434) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (434) app_init: Application information:[0m
+[0;32mI (434) app_init: Project name:     hello_world[0m
+[0;32mI (438) app_init: App version:      1[0m
+[0;32mI (441) app_init: Compile time:     Dec 12 2025 20:00:52[0m
+[0;32mI (446) app_init: ELF file SHA256:  441a78240...[0m
+[0;32mI (451) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (455) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (458) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (473) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (478) heap_init: At 3FFB8600 len 00027A00 (158 KiB): DRAM[0m
+[0;32mI (483) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (488) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (494) heap_init: At 40097F48 len 000080B8 (32 KiB): IRAM[0m
+[0;32mI (501) spi_flash: detected chip: generic[0m
+[0;32mI (503) spi_flash: flash io: dio[0m
+[0;33mW (506) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (529) MAIN: Starting ESP32 Temperature Monitor[0m
+[0;32mI (549) DHT11: DHT11 Temperature Monitor with WiFi/MQTT[0m
+[0;32mI (549) BUZZER: Alert threshold: 27°C[0m
+[0;32mI (549) BUZZER: Testing buzzer...[0m
+[0;32mI (549) BUZZER: Beeping at 2500 Hz for 200 ms[0m
+[0;32mI (749) BUZZER: Beep complete[0m
+[0;32mI (1249) MAIN: Initializing DHT11 sensor...[0m
+[0;32mI (2249) MAIN: Initializing WiFi...[0m
+[0;32mI (2259) wifi:wifi driver task: 3ffc05d8, prio:23, stack:6656, core=0[0m
+[0;32mI (2269) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (2269) wifi:wifi certification version: v7.0[0m
+[0;32mI (2269) wifi:config NVS flash: enabled[0m
+[0;32mI (2269) wifi:config nano formatting: disabled[0m
+[0;32mI (2279) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2279) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2279) wifi:Init management short buffer num: 32[0m
+[0;32mI (2289) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2289) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2299) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2299) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2309) wifi_init: rx ba win: 6[0m
+[0;32mI (2309) wifi_init: accept mbox: 6[0m
+[0;32mI (2309) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2309) wifi_init: udp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp mbox: 6[0m
+[0;32mI (2319) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2319) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2329) wifi_init: tcp mss: 1440[0m
+[0;32mI (2329) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2329) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (2339) WiFi: No NVS storage. Using Kconfig credentials.[0m
+[0;32mI (2339) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (2429) wifi:mode : sta (78:1c:3c:f6:1f:fc)[0m
+[0;32mI (2429) wifi:enable tsf[0m
+[0;32mI (2439) WiFi: WiFi initialization finished. Connecting to JUNCHANNN...[0m
+[0;32mI (2449) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2459) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2459) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2469) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2489) wifi:connected with JUNCHANNN, aid = 5, channel 11, BW20, bssid = 2a:d0:ea:25:31:72[0m
+[0;32mI (2489) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (2499) wifi:pm start, type: 1[0m
+
+[0;32mI (2499) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2559) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3529) esp_netif_handlers: sta ip: 192.168.137.250, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (3529) WiFi: Got IP:192.168.137.250[0m
+[0;32mI (3529) WiFi: Connected to WiFi[0m
+[0;32mI (3529) MAIN: WiFi connected successfully[0m
+[0;32mI (3529) MAIN: Starting MQTT client...[0m
+[0;32mI (3539) MQTT: Connecting to MQTT broker: mqtt://192.168.137.1:1883[0m
+[0;32mI (3549) MQTT: MQTT client started[0m
+[0;32mI (3569) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (3579) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=22525[0m
+[0;32mI (5569) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (5579) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=6434)[0m
+[0;32mI (5579) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (5739) wifi:<ba-add>idx:0 (ifx:0, 2a:d0:ea:25:31:72), tid:0, ssn:11, winSize:64[0m
+[0;32mI (10599) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (10599) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=57901)[0m
+[0;32mI (10609) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (15629) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (15639) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=307)[0m
+[0;32mI (15639) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (20659) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (20669) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=40221)[0m
+[0;32mI (20669) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (25689) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (25699) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=4410)[0m
+[0;32mI (25699) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (30719) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (30729) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=10038)[0m
+[0;32mI (30729) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (35749) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (35759) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=7765)[0m
+[0;32mI (35759) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (40779) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (40789) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=43930)[0m
+[0;32mI (40789) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (45809) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (45819) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=6398)[0m
+[0;32mI (45819) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (50839) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (50849) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=14461)[0m
+[0;32mI (50849) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (55869) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (55869) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=46366)[0m
+[0;32mI (55879) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (60899) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (60909) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=37818)[0m
+[0;32mI (60909) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (65929) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (65929) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=34233)[0m
+[0;32mI (65939) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (70959) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (70969) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=37508)[0m
+[0;32mI (70969) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (75989) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (75989) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=8399)[0m
+[0;32mI (75999) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (81019) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (81029) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=8918)[0m
+[0;32mI (81029) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (86049) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (86059) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=61295)[0m
+[0;32mI (86059) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (91079) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (91089) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=55793)[0m
+[0;32mI (91089) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (96109) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (96109) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=30745)[0m
+[0;32mI (96119) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (101139) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (101149) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=43987)[0m
+[0;32mI (101149) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (106169) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (106179) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=61850)[0m
+[0;32mI (106179) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (111199) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (111209) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=4591)[0m
+[0;32mI (111209) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (116229) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (116239) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=42303)[0m
+[0;32mI (116239) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (121259) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (121269) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=10506)[0m
+[0;32mI (121269) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (126289) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (126289) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=22976)[0m
+[0;32mI (126299) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (131319) DHT11: Temperature: 26 °C, Humidity: 86 %[0m
+[0;32mI (131329) MQTT: Published: {"temperature":26,"humidity":86} (msg_id=57142)[0m
+[0;32mI (131329) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (136349) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (136359) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=44464)[0m
+[0;32mI (136359) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (141379) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (141379) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=35010)[0m
+[0;32mI (141389) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (146409) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (146419) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=36283)[0m
+[0;32mI (146419) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (151439) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (151449) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=65372)[0m
+[0;32mI (151449) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (156469) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (156479) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=40232)[0m
+[0;32mI (156479) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (161499) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (161509) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=13040)[0m
+[0;32mI (161509) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (166529) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (166539) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=34917)[0m
+[0;32mI (166539) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (171559) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (171559) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=28393)[0m
+[0;32mI (171569) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (176589) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (176589) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=24032)[0m
+[0;32mI (176599) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (181619) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (181619) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=53139)[0m
+[0;32mI (181629) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (186649) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (186649) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=14844)[0m
+[0;32mI (186659) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (191679) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (191679) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=43488)[0m
+[0;32mI (191689) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (196709) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (196709) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=32252)[0m
+[0;32mI (196719) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (201739) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (201749) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=8049)[0m
+[0;32mI (201749) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (206769) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (206779) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=51453)[0m
+[0;32mI (206779) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (211799) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (211809) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=36378)[0m
+[0;32mI (211809) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (216829) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (216839) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=51140)[0m
+[0;32mI (216839) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (221859) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (221859) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=13608)[0m
+[0;32mI (221869) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (226889) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (226899) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=26533)[0m
+[0;32mI (226899) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (231919) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (231919) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=45209)[0m
+[0;32mI (231929) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (236949) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (236959) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=31585)[0m
+[0;32mI (236959) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;33mW (241979) DHT11: DHT11 CRC error - data corrupted[0m
+[0;32mI (246999) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (247009) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=7009)[0m
+[0;32mI (247009) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (252029) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (252039) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=64721)[0m
+[0;32mI (252039) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (257059) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (257069) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33755)[0m
+[0;32mI (257069) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (262089) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (262099) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=22277)[0m
+[0;32mI (262099) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (267119) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (267129) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=43834)[0m
+[0;32mI (267129) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (272149) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (272159) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=62094)[0m
+[0;32mI (272159) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (277179) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (277189) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=55000)[0m
+[0;32mI (277189) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (282209) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (282219) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=24048)[0m
+[0;32mI (282219) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (287239) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (287249) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12110)[0m
+[0;32mI (287249) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (292269) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (292279) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=22809)[0m
+[0;32mI (292279) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (297299) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (297309) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=40617)[0m
+[0;32mI (297309) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (302329) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (302339) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=58821)[0m
+[0;32mI (302339) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (307359) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (307369) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=20601)[0m
+[0;32mI (307369) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (312389) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (312389) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=30254)[0m
+[0;32mI (312399) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (317419) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (317419) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=34962)[0m
+[0;32mI (317429) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (322449) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (322459) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=46650)[0m
+[0;32mI (322459) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (327479) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (327489) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=65326)[0m
+[0;32mI (327489) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (332509) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (332519) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=24358)[0m
+[0;32mI (332519) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (337539) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (337549) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=43619)[0m
+[0;32mI (337549) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (342569) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (342579) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=48887)[0m
+[0;32mI (342579) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (347599) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (347609) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=26458)[0m
+[0;32mI (347609) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (352629) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (352629) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=24490)[0m
+[0;32mI (352639) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (357659) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (357669) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=31887)[0m
+[0;32mI (357669) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (362689) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (362689) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=8963)[0m
+[0;32mI (362699) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (367719) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (367729) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=27989)[0m
+[0;32mI (367729) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (372749) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (372749) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12985)[0m
+[0;32mI (372759) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (377779) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (377789) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=39282)[0m
+[0;32mI (377789) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (382809) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (382819) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=23760)[0m
+[0;32mI (382819) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (387839) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (387849) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=23235)[0m
+[0;32mI (387849) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (392869) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (392879) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61107)[0m
+[0;32mI (392879) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (397899) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (397909) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=19995)[0m
+[0;32mI (397909) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (402929) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (402939) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=50686)[0m
+[0;32mI (402939) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (407959) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (407969) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=27964)[0m
+[0;32mI (407969) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (412989) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (412999) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=30911)[0m
+[0;32mI (412999) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (418019) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (418029) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=61627)[0m
+[0;32mI (418029) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (423049) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (423059) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=49169)[0m
+[0;32mI (423059) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (428079) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (428089) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=59333)[0m
+[0;32mI (428089) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (433109) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (433109) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=49798)[0m
+[0;32mI (433119) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (438139) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (438139) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=36740)[0m
+[0;32mI (438149) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (443169) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (443179) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=29271)[0m
+[0;32mI (443179) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (448199) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (448199) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=28352)[0m
+[0;32mI (448209) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (453229) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (453229) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=9176)[0m
+[0;32mI (453239) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (458259) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (458269) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=4469)[0m
+[0;32mI (458269) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (463289) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (463289) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=53448)[0m
+[0;32mI (463299) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (468319) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (468329) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=49527)[0m
+[0;32mI (468329) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (473349) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (473359) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=37848)[0m
+[0;32mI (473359) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (478379) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (478379) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=14168)[0m
+[0;32mI (478389) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (483409) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (483409) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=57241)[0m
+[0;32mI (483419) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (488439) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (488449) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=15700)[0m
+[0;32mI (488449) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (493469) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (493479) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=12422)[0m
+[0;32mI (493479) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;33mW (498499) DHT11: DHT11 CRC error - data corrupted[0m
+[0;32mI (503519) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (503519) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=10593)[0m
+[0;32mI (503529) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (508549) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (508559) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=53641)[0m
+[0;32mI (508559) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (513579) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (513589) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=57691)[0m
+[0;32mI (513589) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (518609) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (518619) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=50237)[0m
+[0;32mI (518619) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (523639) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (523649) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=55342)[0m
+[0;32mI (523649) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (528669) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (528679) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=28190)[0m
+[0;32mI (528679) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (533699) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (533699) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=29242)[0m
+[0;32mI (533709) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (538729) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (538739) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=47620)[0m
+[0;32mI (538739) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (543759) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (543759) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=9634)[0m
+[0;32mI (543769) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (548789) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (548799) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=59428)[0m
+[0;32mI (548799) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (553819) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (553829) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61499)[0m
+[0;32mI (553829) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (558849) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (558859) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=37208)[0m
+[0;32mI (558859) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (563879) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (563879) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=3825)[0m
+[0;32mI (563889) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (568909) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (568909) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=50336)[0m
+[0;32mI (568919) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (573939) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (573939) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=34667)[0m
+[0;32mI (573949) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (578969) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (578969) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=18647)[0m
+[0;32mI (578979) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (583999) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (583999) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=4303)[0m
+[0;32mI (584009) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (589029) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (589029) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=14957)[0m
+[0;32mI (589039) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (594059) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (594059) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=10930)[0m
+[0;32mI (594069) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (599089) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (599099) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=55539)[0m
+[0;32mI (599099) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (604119) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (604129) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=58271)[0m
+[0;32mI (604129) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (609149) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (609149) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=13916)[0m
+[0;32mI (609159) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (614179) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (614189) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=16553)[0m
+[0;32mI (614189) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (619209) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (619209) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=57218)[0m
+[0;32mI (619219) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (624239) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (624239) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=1905)[0m
+[0;32mI (624249) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (629269) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (629279) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=7115)[0m
+[0;32mI (629279) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (634299) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (634299) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=28611)[0m
+[0;32mI (634309) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (639329) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (639339) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=32644)[0m
+[0;32mI (639339) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (644359) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (644369) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=23023)[0m
+[0;32mI (644369) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (649389) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (649389) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=58198)[0m
+[0;32mI (649399) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (654419) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (654419) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=48372)[0m
+[0;32mI (654429) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (659449) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (659449) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=57808)[0m
+[0;32mI (659459) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (664479) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (664489) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=6105)[0m
+[0;32mI (664489) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (669509) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (669519) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=46085)[0m
+[0;32mI (669519) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (674539) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (674549) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=61019)[0m
+[0;32mI (674549) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (679569) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (679579) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=3644)[0m
+[0;32mI (679579) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (684599) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (684609) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=3975)[0m
+[0;32mI (684609) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (689629) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (689629) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=8014)[0m
+[0;32mI (689639) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (694659) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (694659) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=21866)[0m
+[0;32mI (694669) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (699689) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (699699) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=38462)[0m
+[0;32mI (699699) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (704719) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (704719) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=30836)[0m
+[0;32mI (704729) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (709749) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (709759) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=3778)[0m
+[0;32mI (709759) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (714779) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (714779) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=57119)[0m
+[0;32mI (714789) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (719809) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (719809) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=64463)[0m
+[0;32mI (719819) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (724839) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (724849) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=15732)[0m
+[0;32mI (724849) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (729869) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (729879) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=25520)[0m
+[0;32mI (729879) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (734899) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (734909) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=31121)[0m
+[0;32mI (734909) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (739929) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (739939) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=43905)[0m
+[0;32mI (739939) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (744959) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (744959) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=13140)[0m
+[0;32mI (744969) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (749989) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (749989) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=30498)[0m
+[0;32mI (749999) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (755019) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (755019) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=17306)[0m
+[0;32mI (755019) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (760039) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (760049) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=44970)[0m
+[0;32mI (760049) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (765069) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (765079) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=2321)[0m
+[0;32mI (765079) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (770099) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (770109) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=15371)[0m
+[0;32mI (770109) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (775129) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (775139) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=7788)[0m
+[0;32mI (775139) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (780159) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (780169) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=27860)[0m
+[0;32mI (780169) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (785189) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (785199) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=32731)[0m
+[0;32mI (785199) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (790219) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (790219) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=64301)[0m
+[0;32mI (790229) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (795249) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (795249) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=49966)[0m
+[0;32mI (795259) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (800279) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (800289) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=5835)[0m
+[0;32mI (800289) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (805309) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (805319) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=62958)[0m
+[0;32mI (805319) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (810339) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (810349) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=58113)[0m
+[0;32mI (810349) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (815369) DHT11: Temperature: 26 °C, Humidity: 89 %[0m
+[0;32mI (815379) MQTT: Published: {"temperature":26,"humidity":89} (msg_id=27880)[0m
+[0;32mI (815379) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (820399) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (820409) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12521)[0m
+[0;32mI (820409) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (825429) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (825429) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=38187)[0m
+[0;32mI (825439) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (830459) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (830469) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33591)[0m
+[0;32mI (830469) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (835489) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (835489) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=54466)[0m
+[0;32mI (835499) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (840519) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (840529) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=20888)[0m
+[0;32mI (840529) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (845549) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (845549) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=44756)[0m
+[0;32mI (845559) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (850579) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (850589) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=18678)[0m
+[0;32mI (850589) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (855609) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (855619) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=47574)[0m
+[0;32mI (855619) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (860639) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (860649) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=42016)[0m
+[0;32mI (860649) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (865669) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (865679) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=55515)[0m
+[0;32mI (865679) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (870699) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (870709) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=52137)[0m
+[0;32mI (870709) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (875729) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (875729) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=14408)[0m
+[0;32mI (875739) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (880759) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (880759) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=56337)[0m
+[0;32mI (880769) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (885789) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (885799) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61856)[0m
+[0;32mI (885799) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (890819) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (890829) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=36298)[0m
+[0;32mI (890829) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (895849) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (895859) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=54308)[0m
+[0;32mI (895859) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (900879) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (900889) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=36844)[0m
+[0;32mI (900889) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (905909) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (905909) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=19693)[0m
+[0;32mI (905919) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (910939) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (910949) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=52006)[0m
+[0;32mI (910949) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (915969) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (915979) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=27399)[0m
+[0;32mI (915979) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (920999) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (921009) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=49877)[0m
+[0;32mI (921009) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (926029) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (926039) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=64621)[0m
+[0;32mI (926039) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (931059) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (931069) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=50293)[0m
+[0;32mI (931069) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (936089) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (936099) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=5769)[0m
+[0;32mI (936099) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (941119) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (941129) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=6231)[0m
+[0;32mI (941129) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (946149) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (946159) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=39198)[0m
+[0;32mI (946159) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (951179) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (951179) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33078)[0m
+[0;32mI (951189) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (956209) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (956219) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=19782)[0m
+[0;32mI (956219) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (961239) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (961249) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=7944)[0m
+[0;32mI (961249) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (966269) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (966279) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=23918)[0m
+[0;32mI (966279) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (971299) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (971309) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=50496)[0m
+[0;32mI (971309) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (976329) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (976339) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61245)[0m
+[0;32mI (976339) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (981359) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (981369) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=61206)[0m
+[0;32mI (981369) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (986389) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (986399) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=57177)[0m
+[0;32mI (986399) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (991419) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (991429) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33712)[0m
+[0;32mI (991429) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (996449) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (996459) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=11955)[0m
+[0;32mI (996459) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1001479) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1001479) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=43055)[0m
+[0;32mI (1001489) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1006509) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1006519) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=5646)[0m
+[0;32mI (1006519) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;33mW (1011539) DHT11: DHT11 CRC error - data corrupted[0m
+[0;32mI (1016559) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1016569) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=53585)[0m
+[0;32mI (1016569) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1021589) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1021599) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=37290)[0m
+[0;32mI (1021599) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1026619) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1026629) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=31511)[0m
+[0;32mI (1026629) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1031649) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1031659) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=20227)[0m
+[0;32mI (1031659) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1036679) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1036689) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=63689)[0m
+[0;32mI (1036689) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1041709) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1041719) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=508)[0m
+[0;32mI (1041719) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1046739) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1046739) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=11774)[0m
+[0;32mI (1046749) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1051769) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1051779) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=58751)[0m
+[0;32mI (1051779) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1056799) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1056809) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=15873)[0m
+[0;32mI (1056809) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1061829) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1061829) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=31292)[0m
+[0;32mI (1061839) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1066859) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1066869) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=47437)[0m
+[0;32mI (1066869) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1071889) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1071899) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=11437)[0m
+[0;32mI (1071899) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1076919) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1076919) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=17106)[0m
+[0;32mI (1076929) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1081949) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1081949) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=4601)[0m
+[0;32mI (1081959) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1086979) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1086989) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=26192)[0m
+[0;32mI (1086989) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1092009) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1092019) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=47944)[0m
+[0;32mI (1092019) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1097039) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1097049) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=53780)[0m
+[0;32mI (1097049) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1102069) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1102079) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=48866)[0m
+[0;32mI (1102079) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1107099) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1107109) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=33739)[0m
+[0;32mI (1107109) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1112129) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1112139) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=35563)[0m
+[0;32mI (1112139) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1117159) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1117169) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=62984)[0m
+[0;32mI (1117169) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1122189) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1122199) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=60711)[0m
+[0;32mI (1122199) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1127219) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1127229) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=27746)[0m
+[0;32mI (1127229) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1132249) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1132249) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12511)[0m
+[0;32mI (1132259) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1137279) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1137289) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=31954)[0m
+[0;32mI (1137289) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1142309) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1142319) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=9471)[0m
+[0;32mI (1142319) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1147339) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1147349) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=13644)[0m
+[0;32mI (1147349) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1152369) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1152379) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=47909)[0m
+[0;32mI (1152379) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1157399) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1157409) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=52326)[0m
+[0;32mI (1157409) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1162429) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1162439) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=47887)[0m
+[0;32mI (1162439) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1167459) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1167469) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=36102)[0m
+[0;32mI (1167469) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1172489) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1172489) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=40701)[0m
+[0;32mI (1172499) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1177519) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1177529) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=53376)[0m
+[0;32mI (1177529) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1182549) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1182559) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=13816)[0m
+[0;32mI (1182559) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1187579) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1187589) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=53428)[0m
+[0;32mI (1187589) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1192609) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1192619) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=45938)[0m
+[0;32mI (1192619) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1197639) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1197649) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=23855)[0m
+[0;32mI (1197649) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1202669) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1202679) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=38328)[0m
+[0;32mI (1202679) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1207699) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1207709) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=64927)[0m
+[0;32mI (1207709) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1212729) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1212739) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=6583)[0m
+[0;32mI (1212739) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1217759) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1217759) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=8180)[0m
+[0;32mI (1217769) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1222789) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1222789) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=42392)[0m
+[0;32mI (1222799) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1227819) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1227829) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=17449)[0m
+[0;32mI (1227829) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1232849) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1232859) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=44916)[0m
+[0;32mI (1232859) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1237879) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1237889) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=12430)[0m
+[0;32mI (1237889) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1242909) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1242909) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=14111)[0m
+[0;32mI (1242919) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1247939) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1247949) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=65076)[0m
+[0;32mI (1247949) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1252969) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1252979) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=25672)[0m
+[0;32mI (1252979) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1257999) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1257999) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=24448)[0m
+[0;32mI (1258009) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1263029) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1263039) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=27246)[0m
+[0;32mI (1263039) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;33mW (1268059) DHT11: DHT11 CRC error - data corrupted[0m
+[0;32mI (1273079) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1273089) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=46578)[0m
+[0;32mI (1273089) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1278109) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1278109) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=44517)[0m
+[0;32mI (1278119) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1283139) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1283149) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=53843)[0m
+[0;32mI (1283149) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1288169) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1288179) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=39373)[0m
+[0;32mI (1288179) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1293199) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1293209) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=8064)[0m
+[0;32mI (1293209) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1298229) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1298239) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=54666)[0m
+[0;32mI (1298239) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1303259) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1303269) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=7608)[0m
+[0;32mI (1303269) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1308289) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1308299) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=101)[0m
+[0;32mI (1308299) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1313319) DHT11: Temperature: 26 °C, Humidity: 88 %[0m
+[0;32mI (1313329) MQTT: Published: {"temperature":26,"humidity":88} (msg_id=19273)[0m
+[0;32mI (1313329) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1318349) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1318359) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=42176)[0m
+[0;32mI (1318359) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1323379) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1323389) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=30528)[0m
+[0;32mI (1323389) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1328409) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1328419) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=42034)[0m
+[0;32mI (1328419) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+[0;32mI (1333439) DHT11: Temperature: 26 °C, Humidity: 87 %[0m
+[0;32mI (1333449) MQTT: Published: {"temperature":26,"humidity":87} (msg_id=21246)[0m
+[0;32mI (1333449) BUZZER: Buzzer OFF (GPIO23 = LOW)[0m
+                                                                                                                                                                                                                                                                

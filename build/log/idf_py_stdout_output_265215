@@ -1,0 +1,77 @@
+Command: ninja flash
+[1/7] Performing build step for 'bootloader'
+[1/1] cd /home/junchannn/esp/hello_world/build/bootloader/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/junchannn/esp/hello_world/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/5] Linking CXX executable hello_world.elf
+[3/5] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/junchannn/esp/hello_world/build/hello_world.bin
+[4/5] cd /home/junchannn/esp/hello_world/build/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/junchannn/esp/hello_world/build/partition_table/partition-table.bin /home/junchannn/esp/hello_world/build/hello_world.bin
+hello_world.bin binary size 0xbd330 bytes. Smallest app partition is 0x100000 bytes. 0x42cd0 bytes (26%) free.
+[4/5] cd /home/junchannn/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/junchannn/esp/esp-idf -D "SERIAL_TOOL=/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/home/junchannn/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/junchannn/esp/hello_world/build -P /home/junchannn/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:1c:3c:f6:1f:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cdfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16489...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075f7... (100 %)
+Wrote 26240 bytes (16489 compressed) at 0x00001000 in 0.6 seconds (effective 376.2 kbit/s)...
+Hash of data verified.
+Compressed 774960 bytes to 484981...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c707... (6 %)
+Writing at 0x000250b1... (10 %)
+Writing at 0x0002fbc1... (13 %)
+Writing at 0x0003547d... (16 %)
+Writing at 0x0003b61a... (20 %)
+Writing at 0x0004144c... (23 %)
+Writing at 0x00047436... (26 %)
+Writing at 0x0004cf2d... (30 %)
+Writing at 0x00052fa5... (33 %)
+Writing at 0x00058463... (36 %)
+Writing at 0x0005e03c... (40 %)
+Writing at 0x00063b10... (43 %)
+Writing at 0x0006932a... (46 %)
+Writing at 0x0006e9a3... (50 %)
+Writing at 0x000744b0... (53 %)
+Writing at 0x0007a467... (56 %)
+Writing at 0x0007fcdb... (60 %)
+Writing at 0x00085869... (63 %)
+Writing at 0x0008b5ee... (66 %)
+Writing at 0x00090ea5... (70 %)
+Writing at 0x00096bf3... (73 %)
+Writing at 0x0009c748... (76 %)
+Writing at 0x000a2049... (80 %)
+Writing at 0x000ab6e7... (83 %)
+Writing at 0x000b2767... (86 %)
+Writing at 0x000b87bb... (90 %)
+Writing at 0x000be362... (93 %)
+Writing at 0x000c4717... (96 %)
+Writing at 0x000c998f... (100 %)
+Wrote 774960 bytes (484981 compressed) at 0x00010000 in 11.8 seconds (effective 523.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1266.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

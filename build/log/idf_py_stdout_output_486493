@@ -1,0 +1,6 @@
+Command: ninja all
+[1/4] cd /home/junchannn/esp/hello_world/build/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/junchannn/esp/hello_world/build/partition_table/partition-table.bin /home/junchannn/esp/hello_world/build/hello_world.bin
+hello_world.bin binary size 0x27ce0 bytes. Smallest app partition is 0x100000 bytes. 0xd8320 bytes (84%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/junchannn/esp/hello_world/build/bootloader/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/junchannn/esp/hello_world/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.

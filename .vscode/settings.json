@@ -1,0 +1,10 @@
+{
+    "idf.pythonInstallPath": "/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python",
+    "files.associations": {
+        "esp_system.h": "c",
+        "esp_chip_info.h": "c",
+        "freertos.h": "c",
+        "esp_wifi.h": "c",
+        "esp_event.h": "c"
+    }
+}

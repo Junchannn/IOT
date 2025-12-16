@@ -1,0 +1,46 @@
+Command: ninja flash
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /home/junchannn/esp/hello_world/build/bootloader/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/junchannn/esp/hello_world/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/buzzer.c.obj
+[3/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/dht11.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable hello_world.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/junchannn/esp/hello_world/build/hello_world.bin
+[9/10] cd /home/junchannn/esp/hello_world/build/esp-idf/esptool_py && /home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/junchannn/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/junchannn/esp/hello_world/build/partition_table/partition-table.bin /home/junchannn/esp/hello_world/build/hello_world.bin
+hello_world.bin binary size 0x27ff0 bytes. Smallest app partition is 0x100000 bytes. 0xd8010 bytes (84%) free.
+[9/10] cd /home/junchannn/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/junchannn/esp/esp-idf -D "SERIAL_TOOL=/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/home/junchannn/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/junchannn/esp/hello_world/build -P /home/junchannn/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:1c:3c:f6:1f:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+WARNING: Failed to communicate with the flash chip, read/write operations will fail. Try checking the chip connections or removing any other hardware connected to IOs.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00037fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16489...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075f7... (100 %)
+
+A fatal error occurred: Serial data stream stopped: Possible serial noise or corruption.
+FAILED: CMakeFiles/flash /home/junchannn/esp/hello_world/build/CMakeFiles/flash 
+cd /home/junchannn/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/junchannn/esp/esp-idf -D "SERIAL_TOOL=/home/junchannn/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/home/junchannn/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/junchannn/esp/hello_world/build -P /home/junchannn/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

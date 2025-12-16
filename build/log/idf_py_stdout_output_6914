@@ -1,0 +1,6 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Minimal build - ON
+-- git describe returned 'fatal: bad revision 'HEAD''
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32

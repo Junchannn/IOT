@@ -1,0 +1,3 @@
+dependencies:
+  espressif/pcap: ^1.0.0
+  espressif/coap: ^4.3.5~4
