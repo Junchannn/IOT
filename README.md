@@ -1,14 +1,12 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-H21 | ESP32-H4 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
 
-# Hello World Example
+# IOT Project
 
-Starts a FreeRTOS task to print "Hello World".
+This project hasn't completed yet
+TODO:
+- Communicate between server and esp32
+- RFID card reading
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-## How to use example
-
+## Install
 Follow detailed instructions provided specifically for this example.
 
 Select the instructions depending on Espressif chip installed on your development board:
@@ -17,47 +15,87 @@ Select the instructions depending on Espressif chip installed on your developmen
 - [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
 
 
-## Example folder contents
-
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
-
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
-
-Below is short explanation of remaining files in the project folder.
-
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
-
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
-
-## Troubleshooting
-
-* Program upload failure
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-## Technical support and feedback
-
-Please use the following feedback channels:
-
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
-
-We will get back to you as soon as possible.
 
 ## Flashing code
-
+__This set up is just for WSL only__
 * For the wsl sees the port, open PowerShell with administrator privillege and use ```"C:\Program Files\usbipd-win\usbipd.exe" list`` ![alt text](image.png)
 * Then ```usbipd.exe attach --wsl --busid BUSID``` to attach to wsl device file
 
 * The wsl monitor the connecting device via /dev part. Using 
 ```ls /dev/ttyUSB* /dev/ttyACM* /dev/ttyS* 2>/dev/null``` to list all of them and ```/dev/ttyUSB0``` will be appeared if esp32 is wired successfully
 
-```& "C:\Program Files\mosquitto\mosquitto.exe" -c C:\mosquitto.conf -v```
+__For Windows only user__
+
+## Installation for Windows
+
+### Step 1: Download ESP-IDF Tools Installer
+1. Download the ESP-IDF Tools installer from: https://dl.espressif.com/dl/esp-idf/
+2. Run the installer (esp-idf-tools-setup-x.x.x.exe)
+3. Follow the installation wizard:
+   - Choose "Express" installation for default setup
+   - Select installation directory (default: C:\Espressif)
+   - Let it download and install all required tools
+
+### Step 2: Verify Installation
+1. Open "ESP-IDF Command Prompt" from Start Menu
+2. Run: `idf.py --version`
+3. You should see the ESP-IDF version displayed
+
+## Build and Monitor
+
+### Configure Project
+```bash
+idf.py menuconfig
+```
+Navigate to:
+- Component config -> WiFi -> Set your WiFi SSID and Password
+- Component config -> MQTT -> Set your MQTT broker URL
+
+Save with 'S' and exit with 'Q'
+
+### Build the Project
+```bash
+idf.py build
+```
+
+### Flash to ESP32
+
+For WSL:
+```bash
+idf.py -p /dev/ttyUSB0 flash
+```
+
+For Windows:
+```bash
+idf.py -p COM3 flash
+```
+(Replace COM3 with your actual port - check Device Manager under Ports)
+
+### Monitor Serial Output
+
+For WSL:
+```bash
+idf.py -p /dev/ttyUSB0 monitor
+```
+
+For Windows:
+```bash
+idf.py -p COM3 monitor
+```
+
+To exit monitor: Press `Ctrl+]`
+
+### Build, Flash and Monitor (All at once)
+
+For WSL:
+```bash
+idf.py -p /dev/ttyUSB0 flash monitor
+```
+
+For Windows:
+```bash
+idf.py -p COM3 flash monitor
+```
+
+## Send test data to broker
+- Start mosquitto: `& "C:\Program Files\mosquitto\mosquitto.exe" -c C:\mosquitto.conf -v`
