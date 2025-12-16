@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Environment Monitoring Dashboard</h1>
+            <div class="status" id="status">
+                <span class="status-dot"></span>
+                <span id="status-text">Đang kết nối...</span>
+            </div>
+        </header>
+
+        <section class="sensor-cards">
+            <div class="card temperature">
+                <div class="card-icon">🌡️</div>
+                <div class="card-content">
+                    <h3>Nhiệt độ</h3>
+                    <div class="value" id="temp-value">--</div>
+                    <div class="unit">°C</div>
+                </div>
+            </div>
+
+            <div class="card humidity">
+                <div class="card-icon">💧</div>
+                <div class="card-content">
+                    <h3>Độ ẩm</h3>
+                    <div class="value" id="humidity-value">--</div>
+                    <div class="unit">%</div>
+                </div>
+            </div>
+
+            <div class="card air-quality">
+                <div class="card-icon">🌫️</div>
+                <div class="card-content">
+                    <h3>Chất lượng không khí</h3>
+                    <div class="value" id="air-quality-value">--</div>
+                    <div class="unit">V</div>
+                    <div class="alert" id="air-alert"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="statistics">
+            <h2>📊 Thống kê (24 giờ qua)</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>Nhiệt độ trung bình</h4>
+                    <p id="stat-avg-temp">--</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Nhiệt độ min/max</h4>
+                    <p id="stat-minmax-temp">-- / --</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Độ ẩm trung bình</h4>
+                    <p id="stat-avg-humidity">--</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Độ ẩm min/max</h4>
+                    <p id="stat-minmax-humidity">-- / --</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts">
+            <h2>📈 Biểu đồ theo thời gian</h2>
+            <div class="chart-container">
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="humidityChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="airQualityChart"></canvas>
+            </div>
+        </section>
+
+        <footer>
+            <p>Cập nhật lần cuối: <span id="last-update">--</span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
